@@ -1,10 +1,24 @@
 [package]
-name = "abyss-bot"
+name = "abyss_bot"
 version = "0.1.0"
 edition = "2024"
 license = "GPL-3"
-license-file = "LICENSE"
 authors = ["FlooferLand"]
 repository = "https://github.com/FlooferLand/abyss-bot"
+resolver = "3"
+
+build = "build.rs"
+
+[build-dependencies]
+dotenvy = "0.15"
 
 [dependencies]
+sqlx = { version = "0.8", features = ["runtime-tokio", "postgres", "chrono"] }
+poise = "0.6"
+tokio = { version = "1", features = ["rt", "rt-multi-thread", "macros", "sync", "signal"] }
+dotenvy = "0.15"
+log = "0.4"
+lazy_static = "1.5"
+chrono = { version = "0.4", default-features = false, features = ["clock", "std", "alloc"] }
+indoc = "2.0"
+
