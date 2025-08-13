@@ -2,5 +2,9 @@
 name = "abyss-bot"
 version = "0.1.0"
 edition = "2024"
+license = "GPL-3"
+license-file = "LICENSE"
+authors = ["FlooferLand"]
+repository = "https://github.com/FlooferLand/abyss-bot"
 
 [dependencies]
